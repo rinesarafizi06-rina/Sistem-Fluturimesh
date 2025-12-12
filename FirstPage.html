@@ -6,11 +6,14 @@
     <title>Sistem Fluturimesh</title>
     <link rel="stylesheet" href="Style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+    
 </head>
 <body>
     <section class="header">
-       <div class="nav-links">
+        <nav>
+       <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa-arrow-left" onclick="hideMenu()"></i>
         <ul>
             <li><a href="">HOME</a></li>
             <li><a href="">ABOUT</a></li>
@@ -19,6 +22,9 @@
             <li><a href="Destination.html">DESTINATION</a></li>
         </ul>
        </div>
+       <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+       </nav>
+     
        <div class="text-box">
         <h1>WHERE TO FLY?</h1>
         <p>Find Countless Flights Options & Deals To Various Destinations Around The World.</p>
@@ -26,5 +32,20 @@
        </div>
 
     </section>
+
+    <section>
+        
+    </section>
+    <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu(){
+        navLinks.style.right="0"
+    }
+    function hideMenu(){
+        navLinks.style.right="-200px"
+    }
+
+    </script>
 </body>
 </html>
