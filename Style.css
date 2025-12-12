@@ -108,3 +108,152 @@ transition: 1s;
   }
  
 }
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.trupi{
+    font-family: Arial,  sans-serif;
+     background-color: lightblue;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+.logo{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: rgb(38, 45, 146);
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+.booking-form{
+   
+    color: rgb(38,45,145);
+
+    max-width: 400px;
+    margin:20px auto;
+    padding:20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    
+}
+    
+
+    
+.tabs{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    border:none;
+    background: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+
+}
+
+  
+    
+
+ form label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    align-items: center;
+}
+form input{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 0cap;
+    border-radius: 4px;
+    background-color: rgb(221, 231, 240);
+}
+.show-flights{
+    background: rgb(49, 49, 111);
+     color: white;
+     padding: 12px 28px;
+     border: none;
+     border-radius: 6px;
+     font-size: 16px;
+     font-weight:600;
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+     margin-top: 40px;
+     
+}
+.show-flights:hover{
+    background: rgba(94, 115, 152, 0.441) ;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.20);
+}
+.show-flights:active{
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+.show-flights{
+    display: block;
+    margin: 15px auto 0 auto;
+}
+.prom h2{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    color: rgb(30, 71, 98);
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+    
+.prom-box{
+    background-color: rgb(139, 197, 216);
+    color: rgb(92, 86, 86);
+    padding: 10px;
+    border-radius: 8px;
+    align-items: center;
+    
+}
+.prom-box h3{
+font-weight: 300;
+margin-bottom: 10px;
+ text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    
+}
+.prom-box p{
+    margin-bottom: 20px;
+   text-align: center;
+   font-weight: bold;
+}
+.book-flights{
+
+    background: rgb(49, 49, 111);
+     color: white;
+     padding: 12px 10px;
+     border: none;
+     border-radius: 6px;
+     font-size: 16px;
+     font-weight:600;
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+     margin-top: 40px;
+      display: block;
+    margin: 15px auto 0 auto;
+    
+    
+}
