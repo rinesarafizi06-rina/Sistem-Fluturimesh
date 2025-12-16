@@ -103,18 +103,22 @@ nav img {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    border: 1px solid #fff;
+    border: 1px solid #f44336;
     padding: 12px 34px;
     font-size: 13px;
-    background: transparent;
+    background: #f44336;
     position: relative;
     cursor: pointer;
+    transition: 0.3s;
 }
-
-.visit:hover {
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
+.visit:active {
+    background: #e78c47;   
+    border-color: #e78c47;
+}
+.visit:focus {
+    background:  #e78c47;
+    border-color:  #e78c47;
+    outline: none;
 }
 
 @media(max-width: 700px) {
@@ -122,18 +126,32 @@ nav img {
         display: inline !important;
         color: white !important;
     }
+     #menuShow {
+        display: block;
+    }
+
+   
+    #menuBack {
+        display: none;
+        position: absolute;
+        top: 15px;      
+        left: 15px;    
+        font-size: 24px;
+    }
 
     .nav-links {
         display: flex;
+        position: fixed;
         flex-direction: column;
         background-color: #f44336;
         height: 100vh;
-        width: 200px;
+        width: 220px;
         top: 0;
-        right: -200px;
+        right: -220px;
         /* do e lëviz JS në 0 kur hapet menu */
         text-align: left;
-        z-index: 2;
+        align-items: flex-start;
+        z-index: 999;
         transition: 1s;
     }
 
@@ -154,7 +172,8 @@ nav img {
     }
 
     .nav-links ul {
-        padding: 30px;
+        padding: 10px 25px; 
+        margin-bottom: 520px;
     }
 }
 
