@@ -1,58 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <link rel="stylesheet" href="Style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8">
+<title>Flight App UI</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="trupi">
-    <header>
-        <div class="logo"> 
-            <h1>Destination?</h1>
-        </div>
-    </header>
-<main>
-    <section class="booking-form">
-    <form class="forma">
-       
- <label>
-        From<br>
-     <input type ="text"placeholder="Contry,City,Airoport"/><br><br>
-    </label>
- 
-    <label>
-        To<br>
-     <input type ="text"placeholder="Contry,City,Airoport"/><br><br>
-    </label>
-    <label>
-        when<br>
-        <input type ="text"placeholder="chose your dates"/><br><br>
+<body>
 
-    </label>
-    <label>
-        Who?<br>
-    <input type="int" placeholder="1,2,3.."><br><br>
+<div class="container">
 
-    </label>
- 
-    </form>
-    <button type="submit" class="show-flights">Show-Flights</button>
-    </section>
-    <section class="prom">
-    
+<!-- PAGE 1 -->
+<div class="phone">
+<h2>Book Your Flight ✈️</h2>
 
-        <h2>READY,STEADY,BOOK.</h2>
-        <div class="prom-box">
-            <h3> ThOUSANDS OF FLIGHTS UNDER 21$</h3>
-            <p>
-                Dreaming of winter sun? Now's the perfect time to book your next flight and start planning your next adventure.
-            </p>
-            <button class="book-flights">Book flights</button>
-    </div>
-    </section>
-    
+<div class="tabs">
+<button class="active">Round Trip</button>
+<button>Oneway</button>
+</div>
+
+<div class="card">
+<label>From</label>
+<input type="text" value="Paris">
+
+<label>To</label>
+<input type="text" value="Florence">
+
+<label>Depart</label>
+<input type="date">
+
+<label>Return</label>
+<input type="date">
+
+<button class="primary">Search Flights</button>
+</div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="phone">
+<h2>Select Flight</h2>
+
+<div class="flight">
+<div>
+<strong>CDG → FLR</strong>
+<p>09:30 AM - 11:45 AM</p>
+</div>
+<span>$1181</span>
+</div>
+
+<div class="flight">
+<div>
+<strong>CDG → FLR</strong>
+<p>09:30 AM - 11:45 AM</p>
+</div>
+<span>$696</span>
+</div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="phone">
+<h2>Boarding Pass</h2>
+
+<div class="ticket">
+<p><strong>Passenger:</strong> Jennifer Lopez</p>
+<p><strong>Flight:</strong> PCG714</p>
+<p><strong>From:</strong> CDG</p>
+<p><strong>To:</strong> FLR</p>
+<p><strong>Seat:</strong> 23A</p>
+
+<div class="barcode"></div>
+</div>
+</div>
+
+</div>
+
 </body>
 </html>
