@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #1e1e1e, #283e51);
+  font-family: 'Poppins', sans-serif;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+.back-icon {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 40px;
+  text-decoration: none;
+  color: #f8f3f3;
+  
+  padding: 8px 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.back-icon:hover {
+  background: #333030;
+}
+.seat-map {
+  display: grid;
+  grid-template-columns: repeat(3, 60px) 40px repeat(3, 60px);
+  grid-gap: 18px 30px;
+  justify-content: center;
+  user-select: none;
+}
+
+.seat {
+  width: 60px;
+  height: 60px;
+  background-color: #f56565;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #222;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.seat:hover:not(.selected) {
+  background-color: #ff7b7b;
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(255, 123, 123, 0.6);
+  color: #fff;
+}
+
+
+  .seat.selected {
+  background-color: #bd9b94;
+  color: #fff;
+  
+  box-shadow: 0 0 8px 2px #9f8078; 
+  transform: scale(1.1); 
+  z-index: 2;
+  animation: none; 
+}
+
+
+#confirm-btn {
+  margin-top: 30px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff7b7b;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(252, 147, 77, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#confirm-btn:disabled {
+  background-color: #ff7b7b;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+@media (max-width: 900px) {
+  .seat-map {
+    grid-template-columns: repeat(3, 50px) 30px repeat(3, 50px);
+    grid-gap: 15px 20px;
+  }
+}
+
+#confirm-btn:not(:disabled):hover {
+  background-color: #463b3b;
+  transform: scale(1.05);
+}
+
+
+
+.seat-map > div:nth-child(4),
+.seat-map > div:nth-child(10),
+.seat-map > div:nth-child(16),
+.seat-map > div:nth-child(22),
+.seat-map > div:nth-child(28) {
+  pointer-events: none;
+  background: transparent;
+  cursor: default;
+  box-shadow: none;
+}
+
+#selected-seat {
+  margin-top: 40px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px#fff(0,0,0,0.7);
+}
