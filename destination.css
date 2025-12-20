@@ -106,3 +106,37 @@ button.primary {
 button.primary:hover {
     background: #f44336;
 }
+@media (max-width: 700px) {
+    .container {
+        max-width: 95%;
+        padding: 12px;
+    }
+
+    .phone {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .tabs button {
+        padding: 8px 0;
+        font-size: 12px;
+        margin: 0 3px;
+    }
+
+    .card input {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    button.primary {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    .back-arrow {
+        font-size: 18px;
+        top: 10px;
+        left: 10px;
+    }
+}

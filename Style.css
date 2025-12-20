@@ -320,18 +320,19 @@ h3 {
 
 .footer-box p {
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.5;
     color: #ccc;
 }
 
 .footer-btn {
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 4px 10px;
     background: #f44336;
     border: none;
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 14px;
 }
 
 .footer-btn:hover {
@@ -343,6 +344,5 @@ h3 {
     margin-top: 40px;
     border-top: 1px solid #333;
     padding-top: 15px;
-    font-size: 13px;
     color: #aaa;
 }

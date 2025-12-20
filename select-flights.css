@@ -2,12 +2,16 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    min-height: 100vh;  
 }
 
 .phone {
     width: 400px;
-    margin: 0 auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 15px;
@@ -69,4 +73,38 @@ h2 {
 
 .select-btn:hover {
     background-color: #f44336;
+}
+@media (max-width: 700px) {
+    .phone {
+        width: 90%;            
+        padding: 30px 15px 15px 15px;
+        margin-top: 50px;       
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .flight {
+        padding: 12px 15px;
+        margin-bottom: 12px;
+    }
+
+    .flight-info strong {
+        font-size: 14px;
+    }
+
+    .flight-info p {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .select-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
 }
