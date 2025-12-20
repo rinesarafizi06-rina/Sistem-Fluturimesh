@@ -65,35 +65,62 @@
     </section>
 
     <section class="flights">
-        <h1>Fair Deals From New York</h1>
+    <h1>Fair Deals From New York</h1>
 
-        <div class="row">
-            <div class="flights-col">
+    <div class="slider-container">
+
+        <button class="arrow left" onclick="slideLeft()">&#10094;</button>
+
+        <div class="slider">
+            <div class="slide">
+                <a href="destination.html?place=statue-of-liberty">
                 <img src="f1rstpic.jpg">
-                <div class="layer">
-                    <h3>Statue of Liberty</h3>
-
-                </div>
-
+                <p>Statue of Liberty</p>
+                </a>
             </div>
 
-            <div class="flights-col">
+            <div class="slide">
+                <a href="destination.html?place=empire-state">
                 <img src="photo2.png">
-                <div class="layer">
-                    <h3>Broadway</h3>
-
-                </div>
-
+                <p>Empire State Building</p>
+                </a>
             </div>
-            <div class="flights-col">
-                <img src="booking.jpg">
-                <div class="layer">
-                    <h3>Check more offers</h3>
 
-                </div>
-
+            <div class="slide">
+                <a href="destination.html?place=times-square">
+                <img src="TS.jpg">
+                <p>Times Square</p>
+                </a>
             </div>
-    </section>
+
+            
+            <div class="slide">
+                <a href="destination.html?place=central-park">
+                <img src="CP.jpg">
+                <p>Central Park</p>
+                </a>
+            </div>
+
+             <div class="slide">
+                <a href="destination.html?place=madison-square-garden">
+                <img src="MG.jpg">
+                <p>Madison square garden </p>
+                </a>
+            </div>
+
+             <div class="slide">
+                <a href="destination.html?place=rockefeller-center">
+                <img src="rock.jpg">
+                <p>Rockefeller Center </p>
+                </a>
+            </div>
+        </div>
+
+        <button class="arrow right" onclick="slideRight()">&#10095;</button>
+
+    </div>
+</section>
+
     
     <script>
         var navLinks = document.getElementById("navLinks");
@@ -110,6 +137,25 @@
             navLinks.style.display = "none";
             back.style.display = "hidden";
         }
+        
+let slider = document.querySelector('.slider');
+let slideWidth = document.querySelector('.slide').offsetWidth + 20;
+
+function slideRight() {
+    slider.scrollBy({
+        left: slideWidth,
+        behavior: 'smooth'
+    });
+}
+
+function slideLeft() {
+    slider.scrollBy({
+        left: -slideWidth,
+        behavior: 'smooth'
+    });
+}
+
+
 
     </script>
     <footer class="footer">

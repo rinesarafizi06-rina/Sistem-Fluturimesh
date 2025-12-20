@@ -148,7 +148,6 @@ nav img {
         width: 220px;
         top: 0;
         right: -220px;
-        /* do e lëviz JS në 0 kur hapet menu */
         text-align: left;
         align-items: flex-start;
         z-index: 999;
@@ -157,7 +156,6 @@ nav img {
 
     nav .fa {
         display: flex;
-        /* shfaq ikonat në mobile */
         flex-direction: column;
         margin: 10px;
         font-size: 22px;
@@ -177,20 +175,19 @@ nav img {
     }
 }
 
-/*----- part two -----*/
-.airline {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
+    .airline {
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding-top: 100px;
 }
 
-h1 {
+    h1 {
     font-size: 36px;
     font-weight: 600;
 }
 
-p {
+    p {
     color: rgb(35, 36, 37);
     font-size: 14px;
     font-weight: 300;
@@ -198,13 +195,13 @@ p {
     padding: 10px;
 }
 
-.row {
+   .row {
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
 }
 
-.airline-col {
+   .airline-col {
     flex-basis: 31%;
     background: #fff3f3;
     border-radius: 10px;
@@ -214,14 +211,14 @@ p {
     transition: 0.5s;
 }
 
-h3 {
+    h3 {
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
 
 }
 
-.airline-col:hover {
+  .airline-col:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -234,8 +231,10 @@ h3 {
 .flights {
     width: 80%;
     margin: auto;
+    margin-bottom: 10px;
     text-align: center;
     padding-top: 50px;
+
 
 }
 
@@ -253,38 +252,59 @@ h3 {
     display: block;
 }
 
-.layer {
-    background: transparent;
-    height: 100%;
+.slide a {
+    text-decoration: none; 
+    color: black;         
+}
+
+.slider-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.5s;
 }
 
-.layer:hover {
-    background: rgba(226, 0, 0, 0.7);
+.slide {
+    min-width: 30%;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.layer h3 {
+.slide img {
     width: 100%;
-    font-weight: 500;
-    color: #fff;
-    font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    opacity: 0;
-    transition: 0.5s;
-
+    height: 350px;
+    object-fit: cover;
 }
 
-.layer:hover h3 {
-    bottom: 49%;
-    opacity: 1;
+.slide p {
+    padding: 10px;
+    font-weight: 600;
 }
+
+.arrow {
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.arrow:hover {
+    background: black;
+}
+
 
 * {
     box-sizing: border-box;
@@ -297,6 +317,7 @@ h3 {
     color: #fff;
     padding: 60px 0 20px;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 .footer-container {
@@ -311,6 +332,8 @@ h3 {
 .footer-box {
     flex: 1;
     min-width: 250px;
+    text-align: center;
+    
 }
 
 .footer-box h3 {
@@ -322,6 +345,7 @@ h3 {
     font-size: 14px;
     line-height: 1.5;
     color: #ccc;
+    
 }
 
 .footer-btn {
