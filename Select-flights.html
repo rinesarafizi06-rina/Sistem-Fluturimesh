@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Flight</title>
+    <link rel="stylesheet" href="select-flights.css">
+</head>
+<body>
+
+<div class="phone">
+    <h2>Select Flight</h2>
+
+    <div class="flight">
+        <div class="flight-info">
+             <strong class="route"></strong>
+            <p>09:30 AM - 11:45 AM</p>
+        </div>
+        <span class="price">$1181</span>
+        <button class="select-btn">Select</button>
+    </div>
+
+    <div class="flight">
+        <div class="flight-info">
+            <strong class="route"></strong>
+            <p class="time">02:00 PM - 04:15 PM</p>
+            <small class="date"></small>
+        </div>
+        <span class="price">$696</span>
+        <button class="select-btn">Select</button>
+    </div>
+
+    <div class="flight">
+        <div class="flight-info">
+             <strong class="route"></strong>
+            <p>20:00 PM - 22:15 PM</p>
+        </div>
+        <span class="price">$850</span>
+        <button class="select-btn">Select</button>
+    </div>
+
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const from = urlParams.get("from") || "From";
+    const to = urlParams.get("to") || "To";
+    const depart = urlParams.get("depart") || "";
+
+    document.querySelectorAll(".route").forEach(routeEl => {
+        routeEl.innerText = `${from} → ${to}`;
+    });
+    
+
+    const buttons = document.querySelectorAll('.select-btn');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+
+            const flightDiv = btn.closest('.flight');
+            const route = flightDiv.querySelector('.route').innerText;
+            const time = flightDiv.querySelector('.flight-info p').innerText;
+            const price = flightDiv.querySelector('.price').innerText;
+
+            alert(
+                `Your ticket has been successfully reserved!\n\n` +
+                `Route: ${route}\n` +
+                `Time: ${time}\n` +
+                `Price: ${price}`
+            );
+
+            const params = new URLSearchParams();
+            params.set('route', route);
+            params.set('time', time);
+            params.set('price', price);
+
+            window.location.href = 'ticket-confirmation.html?' + params.toString();
+        });
+    });
+</script>
