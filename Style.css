@@ -353,6 +353,7 @@ nav img {
     padding: 4px 10px;
     background: #f44336;
     border: none;
+    text-decoration: none;
     color: #fff;
     cursor: pointer;
     border-radius: 5px;

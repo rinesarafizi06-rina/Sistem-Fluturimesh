@@ -19,23 +19,23 @@ h1 {
   font-size: 2.8rem;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
-
-.back-icon {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  font-size: 40px;
-  text-decoration: none;
-  color: #f8f3f3;
-  
-  padding: 8px 12px;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+.back-arrow {
+    position: fixed;      
+    top: 15px;
+    left: 30px;
+    font-size: 28px;     
+    color: #f8f3f3;       
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 10;          
 }
 
-.back-icon:hover {
-  background: #333030;
+.back-arrow:hover {
+    color: #607d8b;       
 }
+
+
+
 .seat-map {
   display: grid;
   grid-template-columns: repeat(3, 60px) 40px repeat(3, 60px);

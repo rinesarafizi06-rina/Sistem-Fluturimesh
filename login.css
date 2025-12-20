@@ -157,23 +157,18 @@ button {
   padding: 40px;
 }
 
-
-.back-icon {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  font-size: 40px;
-  text-decoration: none;
-  color: #f8f3f3;
-  
-  padding: 8px 12px;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+.back-arrow {
+    text-decoration: none;
+    font-size: 28px;
+    color: #f4f8f9; 
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
-.back-icon:hover {
-  background: #4e4545;
+.back-arrow:hover {
+    color: #607d8b; 
 }
+
 
 .title {
    text-align: center;
