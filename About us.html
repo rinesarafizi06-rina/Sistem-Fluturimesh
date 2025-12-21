@@ -4,111 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us</title>
+
 <style>
     body {
-        font-family: 'Arial', sans-serif;
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         background: linear-gradient(135deg, #1e1e1e, #283e51);
-        color: #333;
     }
 
     .container {
         max-width: 1000px;
         margin: 50px auto;
         padding: 30px;
-        background-color: #fff;
+        background: #fff;
         border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
     h1, h2 {
         text-align: center;
         color: #2c3e50;
-        margin-bottom: 20px;
     }
 
     p {
         text-align: justify;
-    }
-
-    .feedback-form {
-        margin-top: 30px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-        background-color: #fafafa;
-        border-radius: 12px;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-
-    .feedback-form label {
-        font-weight: bold;
-    }
-
-    .feedback-form input, 
-    .feedback-form textarea, 
-    .feedback-form select {
-        padding: 12px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        width: 100%;
-        box-sizing: border-box;
-        font-size: 14px;
-    }
-
-    .feedback-form textarea {
-        min-height: 120px; 
-        box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
-        resize: vertical;
-    }
-
-    .feedback-form button {
-        padding: 12px;
-        background-color: #f44336;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background 0.3s;
-    }
-
-    .feedback-form button:hover {
-        background-color:  #e78c47;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 25px;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    th, td {
-        padding: 12px 15px;
-        text-align: left;
-    }
-
-    th {
-        background-color: #2b3437;
-        color: #fff;
-    }
-
-    tr:nth-child(even) {
-        background-color: #fff0f0;
-    }
-
-    tr:hover {
-        background-color: #ffd6d1;
+        color: #444;
     }
 
     .back-arrow {
+        font-size: 26px;
         text-decoration: none;
-        font-size: 24px;
         color: #2b3437;
         display: inline-block;
         margin-bottom: 20px;
@@ -117,33 +43,146 @@
     .back-arrow:hover {
         color: #607d8b;
     }
+
+    .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 25px 0 40px 0;
+    }
+
+    .features-list li {
+        background: #fff0f0;
+        padding: 14px 15px 14px 40px;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+        position: relative;
+        font-size: 15px;
+    }
+
+    .features-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 15px;
+        color: #f44336;
+        font-weight: bold;
+    }
+
+    .feedback-form {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 25px;
+        background: #fafafa;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .feedback-form label {
+        font-weight: bold;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea,
+    .feedback-form select {
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    .feedback-form textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .feedback-form button {
+        padding: 12px;
+        background: #f44336;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .feedback-form button:hover {
+        background: #e78c47;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    th, td {
+        padding: 14px;
+        text-align: left;
+    }
+
+    th {
+        background: #2b3437;
+        color: #fff;
+    }
+
+    tr:nth-child(even) {
+        background: #fff0f0;
+    }
+
+    tr:hover {
+        background: #ffd6d1;
+    }
 </style>
 </head>
+
 <body>
+
 <div class="container">
+
     <a href="FirstPage.html" class="back-arrow">&#8592;</a>
+
     <h1>About Us</h1>
-    <p>Welcome to our page! We are a company dedicated to providing the best services to our clients. Our goal is to create unique and satisfying experiences for every customer. Our professionals work with passion and commitment to ensure high-quality service in everything we offer.</p>
+
+    <p>
+        Welcome to our page! We are a company dedicated to providing the best services to our clients.
+        Our goal is to create unique and satisfying experiences for every customer.
+        Our professionals work with passion and commitment to ensure high-quality service.
+    </p>
+
+    <h2>Why Choose Us</h2>
+    <ul class="features-list">
+        <li>Professional and friendly staff</li>
+        <li>Fast and secure booking process</li>
+        <li>Affordable prices and special offers</li>
+        <li>24/7 customer support</li>
+    </ul>
 
     <h2>Client Feedback</h2>
 
     <form class="feedback-form" id="feedbackForm">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Only letters and spaces allowed" required>
 
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+        <label>Your Name:</label>
+        <input type="text" id="name" pattern="[A-Za-z\s]+" title="Only letters and spaces allowed" required>
 
-        <label for="service">Service Used:</label>
-        <select id="service" name="service" required>
+        <label>Email Address:</label>
+        <input type="email" required>
+
+        <label>Service Used:</label>
+        <select id="service" required>
             <option value="">Select a service</option>
-            <option value="Flight Booking">Flight Booking</option>
-            <option value="Vacation Package">Vacation Package</option>
-            <option value="Customer Support">Customer Support</option>
+            <option>Flight Booking</option>
+            <option>Vacation Package</option>
+            <option>Customer Support</option>
         </select>
 
-        <label for="rating">Rating:</label>
-        <select id="rating" name="rating" required>
+        <label>Rating:</label>
+        <select id="rating" required>
             <option value="">Select rating</option>
             <option value="5">5 - Excellent</option>
             <option value="4">4 - Very Good</option>
@@ -152,8 +191,8 @@
             <option value="1">1 - Poor</option>
         </select>
 
-        <label for="comment">Comment:</label>
-        <textarea id="comment" name="comment" required></textarea>
+        <label>Comment:</label>
+        <textarea id="comment" required></textarea>
 
         <button type="submit">Submit Feedback</button>
     </form>
@@ -178,49 +217,39 @@
                 <td>Alban D.</td>
                 <td>Vacation Package</td>
                 <td>4.8/5</td>
-                <td>Very enjoyable experience, the staff was very friendly.</td>
-            </tr>
-            <tr>
-                <td>Elira S.</td>
-                <td>Customer Support</td>
-                <td>5/5</td>
-                <td>Responded quickly and very professionally.</td>
+                <td>Very enjoyable experience.</td>
             </tr>
         </tbody>
     </table>
+
 </div>
 
-    <script>
-    const form = document.getElementById('feedbackForm');
-    const tableBody = document.getElementById('feedbackTable');
+<script>
+    const form = document.getElementById("feedbackForm");
+    const table = document.getElementById("feedbackTable");
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener("submit", function(e) {
         e.preventDefault();
 
-        const name = document.getElementById('name').value.trim();
-        const comment = document.getElementById('comment').value.trim();
-        const service = document.getElementById('service').value;
-        const rating = document.getElementById('rating').value;
+        const name = document.getElementById("name").value.trim();
+        const service = document.getElementById("service").value;
+        const rating = document.getElementById("rating").value;
+        const comment = document.getElementById("comment").value.trim();
 
-        if (name.length === 0) {
-            alert("Please enter your name (letters only).");
+        if (!name || !comment) {
+            alert("Please fill all required fields!");
             return;
         }
 
-        if (comment.length === 0) {
-            alert("Please enter your comment before submitting.");
-            return;
-        }
-
-        const newRow = document.createElement('tr');
-        newRow.innerHTML = `
+        const row = document.createElement("tr");
+        row.innerHTML = `
             <td>${name}</td>
             <td>${service}</td>
             <td>${rating}/5</td>
             <td>${comment}</td>
         `;
-        tableBody.appendChild(newRow);
 
+        table.appendChild(row);
         form.reset();
     });
 </script>
