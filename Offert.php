@@ -31,7 +31,7 @@
   </div>
 
   <div class="card">
-    <img src="Belfast Castle – the jewel at the centre of Cave Hill Country Park 💎🏰.jpg">
+    <img src="Images/Belfast Castle – the jewel at the centre of Cave Hill Country Park 💎🏰.jpg">
     <div class="card-content">
       <span class="date">Sun 16 Jan - Mon 20 Jan</span>
       <h2>Manchester ↔ Belfast</h2>
@@ -41,7 +41,7 @@
   </div>
 
   <div class="card">
-    <img src="sunset view at london street _ Luxora-Hub.jpg">
+    <img src="Images/sunset view at london street _ Luxora-Hub.jpg">
     <div class="card-content">
       <span class="date">Wed 24 Dec - Fri 26 Dec</span>
       <h2>Berlin ↔ London</h2>
@@ -51,7 +51,7 @@
   </div>
 
   <div class="card">
-    <img src="September in Switzerland_ Top Attractions.jpg">
+    <img src="Images/September in Switzerland_ Top Attractions.jpg">
     <div class="card-content">
       <span class="date">Mon 4 Dec - Fri 12 Dec</span>
       <h2>Sofia ↔ Zurich</h2>
@@ -61,7 +61,7 @@
   </div>
 
   <div class="card">
-    <img src="download.jpg">
+    <img src="Images/download.jpg">
     <div class="card-content">
       <span class="date">Wed 30 Mar - Fri 36 Mar</span>
       <h2>Rome ↔ Paris</h2>
@@ -71,7 +71,7 @@
   </div>
 
   <div class="card">
-    <img src="Explore Barcelona’s Iconic Sagrada Familia.jpg">
+    <img src="Images/Explore Barcelona’s Iconic Sagrada Familia.jpg">
     <div class="card-content">
       <span class="date">Tue 15 Jan - Fri 26 Jan</span>
       <h2>Basel ↔ Barcelona</h2>
@@ -81,7 +81,7 @@
   </div>
 
   <div class="card">
-    <img src="City of Priština.jpg">
+    <img src="Images/City of Priština.jpg">
     <div class="card-content">
       <span class="date">Fri 2 Dec - Mon 11 Dec</span>
       <h2>Geneve ↔ Pristina</h2>
@@ -91,7 +91,7 @@
   </div>
 
   <div class="card">
-    <img src="Москва.jpg">
+    <img src="Images/Москва.jpg">
     <div class="card-content">
       <span class="date">Wed 25 Nov - Fri 2 Dec</span>
       <h2>Oslo ↔ Moscow</h2>
@@ -101,7 +101,7 @@
   </div>
 
   <div class="card">
-    <img src="WORLD 2024 🌊 (@W0rld2K24) on X.jpg">
+    <img src="Images/WORLD 2024 🌊 (@W0rld2K24) on X.jpg">
     <div class="card-content">
       <span class="date">Tue 5 Oct - Fri 13 Sep</span>
       <h2>Tirana ↔ Rome</h2>
@@ -111,7 +111,7 @@
   </div>
 
   <div class="card">
-    <img src="The amazing Charles Bridge in Prague.jpg">
+    <img src="Images/The amazing Charles Bridge in Prague.jpg">
     <div class="card-content">
       <span class="date">Mon 10 Jan - Fri 14 Jan</span>
       <h2>Vienna ↔ Prague</h2>
@@ -121,7 +121,7 @@
   </div>
 
   <div class="card">
-    <img src="Lisboa, Portugal_ - Awesome.jpg">
+    <img src="Images/Lisboa, Portugal_ - Awesome.jpg">
     <div class="card-content">
       <span class="date">Thu 20 Feb - Sun 23 Feb</span>
       <h2>Madrid ↔ Lisbon</h2>
@@ -131,7 +131,7 @@
   </div>
 
   <div class="card">
-    <img src="Cara Milano ti scrivo, così mi distraggo un attimo.jpg">
+    <img src="Images/Cara Milano ti scrivo, così mi distraggo un attimo.jpg">
     <div class="card-content">
       <span class="date">Sat 5 Mar - Tue 8 Mar</span>
       <h2>Paris ↔ Milan</h2>
