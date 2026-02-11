@@ -1,3 +1,32 @@
+<?php
+include 'db.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $service = $_POST['service'];
+    $rating = $_POST['rating'];
+    $comment = $_POST['comment'];
+
+    $stmt = $conn->prepare("INSERT INTO feedback (name, email, service, rating, comment) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssis", $name, $email, $service, $rating, $comment);
+    $stmt->execute();
+    $stmt->close();
+
+    header("Location: about-us.php"); 
+    exit;
+}
+
+
+if (isset($_GET['delete'])) {
+    $id = intval($_GET['delete']);
+    $conn->query("DELETE FROM feedback WHERE id=$id");
+    header("Location: about-us.php");
+    exit;
+}
+
+$feedbacks = $conn->query("SELECT * FROM feedback ORDER BY created_at DESC");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -145,7 +174,7 @@
 
 <div class="container">
 
-    <a href="FirstPage.html" class="back-arrow">&#8592;</a>
+    <a href="FirstPage.php" class="back-arrow">&#8592;</a>
 
     <h1>About Us</h1>
 
