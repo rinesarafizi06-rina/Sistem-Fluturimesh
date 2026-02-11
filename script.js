@@ -1,63 +1,32 @@
-/* =========================
-   OFFERS (cards click)
-========================= */
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("click", () => {
-    alert("The offer was selected!");
-  });
-});
-
-
-/* =========================
-   SEATS SELECTION
-========================= */
-let selectedSeat = null;
-
 function selectSeat(seat) {
-  if (seat.classList.contains("taken")) return;
+  document.querySelectorAll('.seat').forEach(s => {
+    if (!s.classList.contains('taken')) {
+      s.classList.remove('selected');
+    }
+  });
 
-  if (selectedSeat) {
-    selectedSeat.classList.remove("selected");
-  }
-
-  seat.classList.add("selected");
-  selectedSeat = seat;
+  seat.classList.add('selected');
 
   document.getElementById("selected-seat").innerText =
     "You have chosen the seat: " + seat.innerText;
 
+  document.getElementById("seatInput").value = seat.innerText;
   document.getElementById("confirm-btn").disabled = false;
 }
 
 function confirmSeat() {
-  if (!selectedSeat) {
-    alert("Please select a seat before confirming.");
-    return;
-  }
+  const seat = document.querySelector('.seat.selected');
+  if (!seat) return;
 
-  alert("Seat " + selectedSeat.innerText + " confirmed! Thank you.");
+  alert('Successfully reserved seat: ' + seat.innerText);
+
+  fetch('confirm_seat.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: 'seat=' + seat.innerText
+  })
+  .then(response => response.text()) 
+  .catch(error => console.error(error));
+
+  document.getElementById('confirm-btn').disabled = true;
 }
-
-
-/* =========================
-   LOGIN VALIDATION
-========================= */
-function validateForm() {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  if (!email.includes("@")) {
-    alert("Email must contain the '@' symbol.");
-    return false;
-  }
-
-  const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/;
-
-  if (!passwordRegex.test(password)) {
-    alert("Password must be at least 8 characters long and include at least one number and one special character.");
-    return false;
-  }
-
-  return true;
-}
-

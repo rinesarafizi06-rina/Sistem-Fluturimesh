@@ -1,69 +1,54 @@
 <?php
-include "db.php";
+include "db.php"; 
 
-$stmt = $conn->query("SELECT * FROM seats ORDER BY id ASC");
-$seats = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $conn->query("SELECT * FROM seats"); 
+$seats = [];
+
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { 
+    $seats[$row['emri_vendi']] = $row;
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Choose Your Seat</title>
-<link rel="stylesheet" href="seats.css">
+  <meta charset="UTF-8">
+  <title>Choose Your Seat</title>
+  <link rel="stylesheet" href="seats.css">
 </head>
 <body>
 
+<a href="FirstPage.html" class="back-arrow">&#8592;</a>
 <h1>Choose Your Seat</h1>
 
 <div class="seat-map">
-<?php foreach($seats as $seat): ?>
-    <div 
-        class="seat <?= $seat['eshte_zgjedhur'] ? 'taken' : '' ?>" 
-        data-id="<?= $seat['id'] ?>"
-    >
-        <?= htmlspecialchars($seat['emri_vendi']) ?>
-    </div>
-<?php endforeach; ?>
+<?php
+$allSeats = [
+  "1A","1B","1C","1D","1E","1F",
+  "2A","2B","2C","2D","2E","2F",
+  "3A","3B","3C","3D","3E","3F",
+  "4A","4B","4C","4D","4E","4F",
+  "5A","5B","5C","5D","5E","5F"
+];
+
+foreach ($allSeats as $seatName) {
+  $taken = isset($seats[$seatName]) && $seats[$seatName]['eshte_zgjedhur'];
+?>
+  <div class="seat <?php if($taken) echo 'taken'; ?>"
+       <?php if(!$taken) { ?> onclick="selectSeat(this)" <?php } ?>>
+    <?= $seatName ?>
+  </div>
+<?php } ?>
 </div>
 
 <div id="selected-seat">You have chosen the seat: None</div>
-<button id="confirm-btn" disabled>Confirm Seat</button>
 
-<script>
-let selectedSeat = null;
 
-document.querySelectorAll('.seat').forEach(seat => {
-    seat.addEventListener('click', () => {
-        if(seat.classList.contains('taken')) return; 
+  <input type="hidden" name="seat" id="seatInput">
+  <button id="confirm-btn" disabled onclick="confirmSeat()">Confirm Seat</button>
 
-        document.querySelectorAll('.seat').forEach(s => s.style.border = '');
 
-        selectedSeat = seat.dataset.id;
-        seat.style.border = "2px solid red";
-
-        document.getElementById('selected-seat').innerText = "You have chosen the seat: " + seat.innerText;
-        document.getElementById('confirm-btn').disabled = false;
-    });
-});
-
-document.getElementById('confirm-btn').addEventListener('click', () => {
-    if(!selectedSeat) return;
-
-    fetch('confirm_seat.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: 'seat_id=' + selectedSeat
-    })
-    .then(res => res.text())
-    .then(res => {
-        alert(res);
-        location.reload(); 
-    });
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
-

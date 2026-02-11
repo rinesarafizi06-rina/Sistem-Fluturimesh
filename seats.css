@@ -78,6 +78,13 @@ h1 {
   z-index: 2;
   animation: none; 
 }
+.seat.taken {
+  background-color: #555;
+  color: #aaa;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
 
 
 #confirm-btn {
