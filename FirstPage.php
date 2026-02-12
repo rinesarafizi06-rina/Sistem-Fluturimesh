@@ -19,10 +19,10 @@
                 <i class="fa-solid fa-arrow-left" id="menuBack" onclick="hideMenu()" style="display: none"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
-                    <li><a href="About us.html">ABOUT</a></li>
-                    <li><a href="Offert.html">OFFERS</a></li>
-                    <li><a href="Seats.html">SEATS</a></li>
-                    <li><a href="Destination.html">DESTINATION</a></li>
+                    <li><a href="About us.php">ABOUT</a></li>
+                    <li><a href="offers.php">OFFERS</a></li>
+                    <li><a href="Seats.php">SEATS</a></li>
+                    <li><a href="Destination.php">DESTINATION</a></li>
                 </ul>
             </div>
             <i class="fa-solid fa-bars" id="menuShow" onclick="showMenu()" style="display: none"></i>
@@ -31,7 +31,7 @@
         <div class="text-box">
             <h1>WHERE TO FLY?</h1>
             <p>Find Countless Flights Options & Deals To Various Destinations Around The World.</p>
-            <a href="Login.html" class="visit">Book Your Trip Now</a>
+            <a href="Login.php" class="visit">Book Your Trip Now</a>
         </div>
 
     </section>
@@ -73,21 +73,21 @@
 
         <div class="slider">
             <div class="slide">
-                <a href="destination.html?place=statue-of-liberty">
+                <a href="destination.php?place=statue-of-liberty">
                 <img src="Images/f1rstpic.jpg">
                 <p>Statue of Liberty</p>
                 </a>
             </div>
 
             <div class="slide">
-                <a href="destination.html?place=empire-state">
+                <a href="destination.php?place=empire-state">
                 <img src="Images/photo2.png">
                 <p>Empire State Building</p>
                 </a>
             </div>
 
             <div class="slide">
-                <a href="destination.html?place=times-square">
+                <a href="destination.php?place=times-square">
                 <img src="Images/TS.jpg">
                 <p>Times Square</p>
                 </a>
@@ -95,21 +95,21 @@
 
             
             <div class="slide">
-                <a href="destination.html?place=central-park">
+                <a href="destination.php?place=central-park">
                 <img src="Images/CP.jpg">
                 <p>Central Park</p>
                 </a>
             </div>
 
              <div class="slide">
-                <a href="destination.html?place=madison-square-garden">
+                <a href="destination.php?place=madison-square-garden">
                 <img src="Images/MG.jpg">
                 <p>Madison square garden </p>
                 </a>
             </div>
 
              <div class="slide">
-                <a href="destination.html?place=rockefeller-center">
+                <a href="destination.php?place=rockefeller-center">
                 <img src="Images/rock.jpg">
                 <p>Rockefeller Center </p>
                 </a>
@@ -167,7 +167,7 @@ function slideLeft() {
                 We help you find the best flights at the best prices.
                 Book easily, travel comfortably and explore the world with us.
             </p>
-             <a href="About us.html" class="footer-btn">Learn More</a>
+             <a href="About us.php" class="footer-btn">Learn More</a>
         </div>
 
         <div class="footer-box">
@@ -175,14 +175,14 @@ function slideLeft() {
             <p>Email: support@jetsetgo.com</p>
             <p>Phone: +383 44 123 456</p>
             <p>Location: Prishtina, Kosovo</p>
-            <a href="Contact us.html" class="footer-btn">Get in Touch</a>
+            <a href="Contact us.php" class="footer-btn">Get in Touch</a>
         </div>
 
         <div class="footer-box">
             <h3>Special Offers</h3>
             <p>Flights under 60€</p>
             <p> Top destinations worldwide</p>
-            <a href="Offert.html" class="footer-btn">Explore Deals</a>
+            <a href="offers.php" class="footer-btn">Explore Deals</a>
         </div>
 
     </div>

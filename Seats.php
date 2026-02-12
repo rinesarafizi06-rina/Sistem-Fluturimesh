@@ -1,14 +1,13 @@
 <?php
-include "db.php"; 
+include "db.php";
 
-$stmt = $conn->query("SELECT * FROM seats"); 
+$stmt = $conn->query("SELECT * FROM seats");
 $seats = [];
 
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { 
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $seats[$row['emri_vendi']] = $row;
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +18,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 </head>
 <body>
 
-<a href="FirstPage.html" class="back-arrow">&#8592;</a>
+<a href="FirstPage.php" class="back-arrow">&#8592;</a>
 <h1>Choose Your Seat</h1>
 
 <div class="seat-map">
@@ -44,10 +43,11 @@ foreach ($allSeats as $seatName) {
 
 <div id="selected-seat">You have chosen the seat: None</div>
 
+<input type="hidden" id="seatInput">
 
-  <input type="hidden" name="seat" id="seatInput">
-  <button id="confirm-btn" disabled onclick="confirmSeat()">Confirm Seat</button>
-
+<button id="confirm-btn" disabled onclick="confirmSeat()">
+  Confirm Seat
+</button>
 
 <script src="script.js"></script>
 </body>
