@@ -3,8 +3,8 @@ include "db.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmt = $conn->prepare(
-        "INSERT INTO users (emri, email, password)
-         VALUES (:emri, :email, :password)"
+        "INSERT INTO users (emri, email, password, role)
+         VALUES (:emri, :email, :password, 'user')" 
     );
 
     $stmt->execute([
@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     exit;
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

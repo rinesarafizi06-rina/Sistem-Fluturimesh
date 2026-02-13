@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "db.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -7,8 +8,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $user = $stmt->fetch();
 
     if ($user && password_verify($_POST['password'], $user['password'])) {
-        header("Location: users.php"); 
+
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['emri'] = $user['emri'];
+        $_SESSION['role'] = $user['role'];
+
+        if ($user['role'] === 'admin') {
+            header("Location: admin/dashboard.php");
+        } else {
+            header("Location: users.php"); 
+        }
         exit;
+
     } else {
         $error = "Email ose password gabim!";
     }

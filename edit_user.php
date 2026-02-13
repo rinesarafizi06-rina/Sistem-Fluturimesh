@@ -1,5 +1,12 @@
 <?php
+session_start();
 include "db.php";
+
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    header("Location: login.php");
+    exit;
+}
+
 $id = $_GET['id'];
 
 if ($_POST) {
@@ -12,6 +19,7 @@ if ($_POST) {
         ":id" => $id
     ]);
     header("Location: users.php");
+    exit;
 }
 
 $user = $conn->prepare("SELECT * FROM users WHERE id=:id");
@@ -20,7 +28,7 @@ $user = $user->fetch();
 ?>
 
 <form method="POST">
-    <input name="emri" value="<?= $user['emri'] ?>">
-    <input name="email" value="<?= $user['email'] ?>">
+    <input name="emri" value="<?= htmlspecialchars($user['emri']) ?>">
+    <input name="email" value="<?= htmlspecialchars($user['email']) ?>">
     <button>Update</button>
 </form>
