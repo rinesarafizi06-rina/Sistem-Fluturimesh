@@ -1,7 +1,13 @@
 <?php
+session_start();
 include "db.php";
-$id = $_GET['id'];
 
+if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
+    header("Location: offers.php");
+    exit();
+}
+
+$id = $_GET['id'];
 $stmt = $conn->prepare("SELECT * FROM offers WHERE id=:id");
 $stmt->execute([":id" => $id]);
 $offer = $stmt->fetch();
@@ -18,6 +24,7 @@ if ($_POST) {
         ":id" => $id
     ]);
     header("Location: offers.php");
+    exit();
 }
 ?>
 

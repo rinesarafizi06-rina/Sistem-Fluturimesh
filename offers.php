@@ -144,6 +144,34 @@
 
  
 
-  <script src="script.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+  document.querySelectorAll(".card").forEach(card => {
+
+    card.addEventListener("click", () => {
+
+      const title = card.querySelector("h2").innerText;
+      const price = card.querySelector(".price").innerText;
+      const image = card.querySelector("img").getAttribute("src");
+
+      fetch("save_offer.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: `title=${encodeURIComponent(title)}&price=${encodeURIComponent(price)}&image=${encodeURIComponent(image)}`
+      })
+      .then(res => res.text())
+      .then(() => {
+        alert("The offer has been successfully selected!");
+      });
+
+    });
+
+  });
+
+});
+</script>
 </body>
 </html>

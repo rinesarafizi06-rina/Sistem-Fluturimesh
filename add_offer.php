@@ -1,5 +1,11 @@
 <?php
+session_start();
 include "db.php";
+
+if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
+    header("Location: offers.php");
+    exit();
+}
 
 if ($_POST) {
     $stmt = $conn->prepare("INSERT INTO offers (emri, cmimi, pershkrimi, data_fillimit, data_mbarimit, imazhi) 
@@ -15,6 +21,7 @@ if ($_POST) {
     ]);
 
     header("Location: offers.php");
+    exit();
 }
 ?>
 
