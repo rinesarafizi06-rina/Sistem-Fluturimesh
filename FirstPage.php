@@ -19,7 +19,7 @@
                 <i class="fa-solid fa-arrow-left" id="menuBack" onclick="hideMenu()" style="display: none"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
-                    <li><a href="About us.php">ABOUT</a></li>
+                    <li><a href="about-us.php">ABOUT</a></li>
                     <li><a href="offers.php">OFFERS</a></li>
                     <li><a href="Seats.php">SEATS</a></li>
                     <li><a href="Destination.php">DESTINATION</a></li>
@@ -167,7 +167,7 @@ function slideLeft() {
                 We help you find the best flights at the best prices.
                 Book easily, travel comfortably and explore the world with us.
             </p>
-             <a href="About us.php" class="footer-btn">Learn More</a>
+             <a href="about-us.php" class="footer-btn">Learn More</a>
         </div>
 
         <div class="footer-box">
@@ -175,7 +175,7 @@ function slideLeft() {
             <p>Email: support@jetsetgo.com</p>
             <p>Phone: +383 44 123 456</p>
             <p>Location: Prishtina, Kosovo</p>
-            <a href="Contact us.php" class="footer-btn">Get in Touch</a>
+            <a href="contact-us.php" class="footer-btn">Get in Touch</a>
         </div>
 
         <div class="footer-box">
