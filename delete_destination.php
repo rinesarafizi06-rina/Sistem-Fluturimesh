@@ -1,4 +1,11 @@
 <?php
+session_start(); 
+
+if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
+    header("Location: FirstPage.php"); 
+    exit();
+}
+
 $host = "localhost";
 $db = "sistem_fluturimesh";
 $user = "root";
@@ -9,12 +16,16 @@ if ($conn->connect_error) die("Connection failed: ".$conn->connect_error);
 
 $id = $_GET['id'] ?? 0;
 
-$stmt = $conn->prepare("DELETE FROM bookings WHERE id=?");
-$stmt->bind_param("i", $id);
-$stmt->execute();
-$stmt->close();
+if ($id > 0) {
+    $stmt = $conn->prepare("DELETE FROM bookings WHERE id=?");
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $stmt->close();
+}
 
 $conn->close();
+
 header("Location: select-flights.php");
-exit;
+exit();
 ?>
+

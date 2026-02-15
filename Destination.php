@@ -5,43 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book Your Flight</title>
 <style>
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg,#1e1e1e, #283e51);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
+body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg,#1e1e1e, #283e51);
+    display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
 .container { width: 100%; max-width: 400px; }
-.phone {
-    background: #fff;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    padding: 30px;
-    position: relative;
-}
+.phone { background: #fff; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 30px; position: relative; }
 h2 { text-align: center; margin-bottom: 20px; }
 .tabs { display: flex; justify-content: space-around; margin-bottom: 20px; }
-.tabs button {
-    flex: 1; padding: 10px; border: none; background: #f0f0f0;
-    cursor: pointer; border-radius: 10px; margin: 0 5px;
-}
+.tabs button { flex: 1; padding: 10px; border: none; background: #f0f0f0;
+    cursor: pointer; border-radius: 10px; margin: 0 5px; }
 .tabs button.active { background: #f44336; color: white; }
 .card { display: flex; flex-direction: column; gap: 12px; }
-.card input {
-    padding: 10px; border-radius: 10px; border: 1px solid #ddd;
-}
-button.primary {
-    margin-top: 10px; padding: 12px;
-    background: #f44336; color: white; border: none;
-    border-radius: 12px; cursor: pointer;
-}
+.card input { padding: 10px; border-radius: 10px; border: 1px solid #ddd; }
+button.primary { margin-top: 10px; padding: 12px;
+    background: #f44336; color: white; border: none; border-radius: 12px; cursor: pointer; }
 </style>
 </head>
 <body>
-
 <div class="container">
 <div class="phone">
 <h2>Book Your Flight</h2>
