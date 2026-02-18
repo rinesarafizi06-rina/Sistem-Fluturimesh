@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'db.php';
 
 $success = "";
@@ -15,7 +16,7 @@ if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['contact_submit'])){
             ':email'=>$email,
             ':message'=>$message
         ]);
-        $success = "Mesazhi u ruajt me sukses!";
+        $success = "Message has been saved successfully!";
     }
 }
 ?>
@@ -116,4 +117,3 @@ body {
 
 </body>
 </html>
-
