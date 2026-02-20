@@ -2,21 +2,27 @@
 session_start();
 include "db.php";
 
+$error = "";
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email=:email");
-    $stmt->execute([":email" => $_POST['email']]);
+
+    $email = trim($_POST['email']);
+    $password = trim($_POST['password']);
+
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
+    $stmt->execute([":email" => $email]);
     $user = $stmt->fetch();
 
-    if ($user && password_verify($_POST['password'], $user['password'])) {
+    if ($user && password_verify($password, $user['password'])) {
 
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['emri'] = $user['emri'];
         $_SESSION['role'] = $user['role'];
 
         if ($user['role'] === 'admin') {
-            header("Location:FirstPage.php");
+            header("Location: admin_dashboard.php");
         } else {
-            header("Location:  FirstPage.php"); 
+            header("Location: FirstPage.php");
         }
         exit;
 
@@ -25,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <form method="POST">
             <h2>Login</h2>
 
-            <?php if (isset($error)) echo "<p style='color:red; text-align:center; margin-bottom:10px;'>$error</p>"; ?>
+            <?php if (!empty($error)) echo "<p style='color:red;text-align:center;margin-bottom:10px;'>$error</p>"; ?>
 
             <div class="input-box">
                 <input type="email" name="email" required>

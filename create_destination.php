@@ -34,7 +34,7 @@ if($from && $to && $depart && $tripType){
     $stmt->execute();
     $stmt->close();
 
-    $_SESSION['success'] = "Rezervimi u shtua me sukses!";
+    $_SESSION['success'] = "Booking added successfully!";
 }
 
 $conn->close();

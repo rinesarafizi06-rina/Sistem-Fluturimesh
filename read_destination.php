@@ -26,8 +26,8 @@ while($row = $result->fetch_assoc()){
 
     if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin'){
         echo "<td>
-            <a href='editBooking.php?id={$row['id']}'>Edit</a> | 
-            <a href='deleteBooking.php?id={$row['id']}'>Delete</a>
+            <a href='edit_destination.php?id={$row['id']}'>Edit</a> | 
+            <a href='delete_destination.php?id={$row['id']}'>Delete</a>
         </td>";
     }
     echo "</tr>";
