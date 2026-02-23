@@ -1,17 +1,24 @@
+<?php
+session_start();
+include "db.php";
+
+if (!isset($_SESSION['role']) || $_SESSION['role'] != 'user') {
+    header("Location: login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="sq">
 <head>
   <meta charset="UTF-8">
   <title>Top Flight Deals</title>
   <link rel="stylesheet" href="login.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
 </head>
 <body class="body1">
-<a href="FirstPage.php" class="back-arrow">&#8592;</a>
 
  <h1 class="title">
    Top Flight Deals

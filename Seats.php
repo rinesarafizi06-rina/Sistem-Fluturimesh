@@ -24,35 +24,49 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['seat'])) {
     );
     $stmt->execute([':seat'=>$seatName, ':user_id'=>$user_id]);
 
+    if ($stmt->rowCount() === 0) {
+        header("Location: seats.php?error=taken");
+        exit();
+    }
+
     header("Location: seats.php");
     exit();
 }
 
-$allSeats = ["1A","1B","1C","1D","1E","1F","2A","2B","2C","2D","2E","2F","3A","3B","3C","3D","3E","3F","4A","4B","4C","4D","4E","4F","5A","5B","5C","5D","5E","5F"];
+$allSeats = [
+"1A","1B","1C","1D","1E","1F",
+"2A","2B","2C","2D","2E","2F",
+"3A","3B","3C","3D","3E","3F",
+"4A","4B","4C","4D","4E","4F",
+"5A","5B","5C","5D","5E","5F"
+];
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Choose Your Seat</title>
 <link rel="stylesheet" href="seats.css">
 </head>
 <body>
 
-<a href="firstpage.php" class="back-arrow">&#8592;</a>
 <h1>Choose Your Seat</h1>
 
-<div class="seat-map">
-<?php foreach($allSeats as $seatName):
-    $taken = isset($seats[$seatName]) && $seats[$seatName]['eshte_zgjedhur'];
-?>
-    <div class="seat <?= $taken ? 'taken' : '' ?>" data-seat="<?= $seatName ?>">
-        <?= $seatName ?>
+<div class="seat-wrapper">
+    <div class="seat-map">
+        <?php foreach($allSeats as $seatName):
+            $taken = isset($seats[$seatName]) && $seats[$seatName]['eshte_zgjedhur'];
+        ?>
+        <div class="seat <?= $taken ? 'taken' : '' ?>" data-seat="<?= $seatName ?>">
+            <?= $seatName ?>
+        </div>
+        <?php endforeach; ?>
     </div>
-<?php endforeach; ?>
 </div>
 
 <div id="selected-seat">You have chosen the seat: None</div>
+
 <form method="POST" id="seat-form">
     <input type="hidden" name="seat" id="seatInput">
     <button type="submit" id="confirm-btn" disabled>Confirm Seat</button>
@@ -69,7 +83,6 @@ let selectedSeat = null;
 seats.forEach(seat => {
     if(!seat.classList.contains('taken')){
         seat.addEventListener('click', () => {
-        
             if(selectedSeat) selectedSeat.classList.remove('selected');
 
             selectedSeat = seat;
@@ -77,6 +90,7 @@ seats.forEach(seat => {
 
             seatInput.value = seat.dataset.seat;
             selectedSeatText.textContent = "You have chosen the seat: " + seat.dataset.seat;
+
             confirmBtn.disabled = false;
         });
     }

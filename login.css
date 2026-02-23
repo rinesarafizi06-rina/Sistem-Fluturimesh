@@ -157,19 +157,6 @@ button{
   padding: 40px;
 }
 
-.back-arrow {
-    text-decoration: none;
-    font-size: 28px;
-    color: #f4f8f9; 
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.back-arrow:hover {
-    color: #607d8b; 
-}
-
-
 .title {
    text-align: center;
   font-size: 48px;
